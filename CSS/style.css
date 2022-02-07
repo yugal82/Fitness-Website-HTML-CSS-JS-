@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    border: 0;
+    transition: all .3s linear;
+}
+
+:root{
+    --black:#000;
+    --red: #f00;
+    --white: #fff;
+    --light-white: #aaa;
+    --light-bg: #111;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+html::-webkit-scrollbar{
+    width: .5rem;
+}
+html::-webkit-scrollbar-track{
+    background: var(--black);
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--red);
+}
+body{
+    background: var(--black);
+}
+section{
+    padding: 5rem 9%;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.heading::before{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    height: .1rem;
+    width: 90%;
+    background: var(--light-white);
+    z-index: -1;
+}
+.heading span{
+    font-size: 4rem;
+    color: var(--red);
+    background: var(--black);
+    padding: .5rem 1.5rem;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--red);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 9%;
+    background: var(--black);
+    z-index: 100;
+}
+.header .logo{
+    font-weight: bolder;
+    color: var(--white);
+    font-size: 3rem;
+}
+.header .logo span{
+    color: var(--red);
+}
+.header .navBar a{
+    
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+.header .navBar a:hover{
+    background-color: var(--red);
+}
+
+#menu-btn{
+    font-size: 3rem;
+    color: var(--white);
+    cursor: pointer;
+    display: none;
+}
+.home{
+    padding: 0;
+    margin-top: 9rem;
+}
+.home .slide{
+    min-height: 70vh;
+    background-size: cover !important ;
+    background-position: center !important;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+}
+.home .slide .content{
+    width: 60rem;
+}
+.home .slide .content span{
+    font-size: 3rem;
+    color: var(--red);
+    display: block ;
+}
+.home .slide .content h3{
+    font-size: 5rem;
+    font-weight: bolder;
+    color: var(--white);
+    padding: 1rem 0;
+}
+.swiper-pagination-bullet {
+    height: 2rem;
+    width: 2rem;
+    background: var(--white);
+}
+.swiper-pagination-bullet .swiper-pagination-bullet-active{
+    background: var(--white);
+}
+
+.about-us{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8rem;
+
+}
+.about-us .image{
+    flex: 1 1 42rem;
+    position: relative;
+}
+.about-us .image::before,
+.about-us .image::after{
+    content: ' ';
+    position: absolute;
+    z-index: -1;
+    background: var(--red);
+    height: 5rem;
+    width: 5rem;
+}
+.about-us .image::before{
+    top: 0;
+    left: 0;
+}
+.about-us .image::after{
+    bottom: 0.5rem;
+    right: 0;
+}
+
+.about-us .image img{
+    width: 100%;
+    padding: 2rem;
+}
+.about-us .content{
+    flex: 1 1 42rem;
+}
+.about-us .content span{
+    font-size: 4.5rem;
+    color: var(--red);
+    font-weight: bolder;
+    position: relative;
+}
+
+.about-us .content .title{
+    font-size: 4rem;
+    color: var(--white);
+    margin-top: .5rem;
+}
+.about-us .content .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.about-us .content .box-container .box{
+    flex: 1 1 20rem;
+}
+.about-us .content .box-container .box h3{
+    font-size: 2rem;
+    color: var(--white);
+}
+.about-us .content .box-container .box i{
+    padding-right: 1.5rem;
+    font-size: 2rem;
+    color: var(--red);
+}
+.about-us .content p{
+    font-size: 1.5rem;
+    color: var(--light-white);
+    padding: 1.5rem;
+}
+
+.features .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem,1fr));
+    gap: 1.5rem;
+}
+.features .box-container .box{
+    background: var(--light-bg);
+}
+
+.features .box-container .second{
+    display: flex;
+    flex-flow: column-reverse;
+}
+.features .box-container .box .image{
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+}
+.features .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.features .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+.features .box-container .box .content img{
+    height: 9rem;
+    margin-bottom: 1rem;
+    filter: invert(1);
+}
+.features .box-container .box .content h3{
+    font-size: 3rem;
+    color: var(--light-white);
+}
+.features .box-container .box .content p{
+    font-size: 1.5rem;
+    color: var(--light-white);
+    line-height: 1.5;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.pricing{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem,1fr));
+    gap: 1.5rem;
+}
+.pricing .information span{
+    color: var(--red);
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.pricing .information h3{
+    margin: 1rem 0;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+.pricing .information p{
+    line-height: 2;
+    color: var(--light-white);
+    font-size: 1.5rem;
+}
+.pricing .information p i{
+    color: var(--red);
+    font-size: 1.5rem;
+}
+
+.pricing .plan{
+    text-align: center;
+    padding: 2rem;
+}
+.pricing .plan h3{
+    color: var(--white);
+    font-size: 3rem;
+}
+.pricing .plan .price{
+    color: var(--light-white);
+    font-size: 1.5rem;
+    
+}.pricing .plan .price h3{
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.pricing .plan .price span{
+    color: var(--light-white);
+    font-size: 1.5rem;
+}
+.pricing .plan .list{
+    padding: 1rem 0;
+}
+
+.pricing .plan .list p{
+    color: var(--light-white);
+    font-size: 1.8rem;
+    padding: .8rem 0;
+}
+.pricing .plan .list i{
+    color: var(--red);
+}
+
+.banner{
+    background: url(../images/banner-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+}
+.banner span{
+    font-size: 3rem;
+    color: var(--red);
+
+}
+
+.banner h3{
+    color: var(--white);
+    font-size: 3rem;
+    padding-top: 1rem;
+    text-transform: uppercase;
+}
+.banner p{
+    color: var(--light-white);
+    font-size:1.5rem;
+    font-weight: bold;
+    max-width: 60%;
+    margin: 1rem auto;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem,1fr));
+    gap: 1.5rem;
+}
+.footer .box-container .box h3{
+    font-size: 2rem;
+    color: var(--white);
+    padding: 1rem 0;
+    /* border-bottom: .1rem solid var(--white); */
+}
+
+.footer .box-container .box a, p{
+    font-size: 1.5rem;
+    color: var(--light-white);
+    padding: 1rem 0;
+    display: block;
+    /* border-bottom: .1rem solid var(--white); */
+}
+.footer .box-container .box a:hover{
+    color: var(--red);
+}
+
+.footer .box-container .box .ri-phone-line{
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.footer .box-container .box .ri-mail-line{
+    margin-right: 1rem;
+    font-size: 2rem;
+
+}
+.gmail{
+    text-transform: lowercase;
+}
+.footer .box-container .share{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.footer .box-container .share a{
+    margin: 0 1rem;
+    font-size: 2rem;
+}
+
+.copyrights{
+    color: var(--white);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+
+
+
+/*media queries */
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 0 2rem;
+    }
+    section{
+        padding: 2rem 3rem;
+    }
+    .home .slide{
+        padding: 2rem 5%;
+    }
+    .home .slide .content{
+        width: 50rem;
+        margin-left: 10%;
+    }
+    .home .slide .content h3{
+        font-size: 4rem;
+    }
+}
+@media(max-width:768px){
+    .header{
+        padding: 2rem;
+    }
+    .header .navBar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: var(--black);
+        display: none;
+    }
+    .header .navBar.active{
+        display: block;
+    }
+    .navBar a{
+        display: block;
+        font-size: 3rem;
+    }
+    #menu-btn{
+        display: block;
+    }
+    .about-us{
+        gap: 3rem;
+    }
+    .about-us .image{
+        margin-top: 5rem;
+    }
+    .about-us .image .content .title{
+        font-size: 3rem;
+    }
+    .features .box-container .second{
+        flex-flow: column;
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 42.5%;
+    }
+    .slider-arrows{
+        display: none;
+    }
+}
